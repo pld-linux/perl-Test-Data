@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests # do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Test
@@ -8,14 +8,14 @@
 Summary:	Test::Data Perl module - test functions for particular variable types
 Summary(pl):	Modu³ Perla Test::Data - funkcje testuj±ce typy okre¶lonych zmiennych
 Name:		perl-Test-Data
-Version:	0.92
+Version:	0.93
 Release:	1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e858fe0ba63b32aad836425f4623e11e
+# Source0-md5:	187c892b0a0b10b5eae80665f1030788
 BuildRequires:	perl-devel >= 5.6
-%if %{?_without_tests:0}%{!?_without_tests:1}
+%if %{with tests}
 BuildRequires:	perl-Test-Pod
 BuildRequires:	perl-Test-Prereq
 BuildRequires:	perl-Test-Simple
@@ -40,7 +40,7 @@ w³asno¶ci oraz warto¶ci danych i zmiennych.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
