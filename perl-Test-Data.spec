@@ -8,8 +8,8 @@
 Summary:	Test::Data Perl module - test functions for particular variable types
 Summary(pl):	Modu³ Perla Test::Data - funkcje testuj±ce typy okre¶lonych zmiennych
 Name:		perl-Test-Data
-Version:	0.7
-Release:	2
+Version:	0.9
+Release:	1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -44,12 +44,6 @@ perl Makefile.PL
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-mv -f $RPM_BUILD_ROOT%{_mandir}/man3/Data.3pm $RPM_BUILD_ROOT%{_mandir}/man3/Test::Data.3pm
-
-for i in Scalar Array Hash Function
-do
-    mv -f $RPM_BUILD_ROOT%{_mandir}/man3/$i.3pm $RPM_BUILD_ROOT%{_mandir}/man3/Test::Data::$i.3pm
-done
 
 %clean
 rm -rf $RPM_BUILD_ROOT
