@@ -29,7 +29,7 @@ Test::Data Perl module provides utility functions to check properties
 and values of data and variables.
 
 %description -l pl
-Modu³ Pela Test::Data udostêpnia funkcje us³ugowe sprawdzaj±ce
+Modu³ Perla Test::Data udostêpnia funkcje us³ugowe sprawdzaj±ce
 w³asno¶ci oraz warto¶ci danych i zmiennych.
 
 %prep
