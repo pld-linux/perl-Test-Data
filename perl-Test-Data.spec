@@ -36,7 +36,7 @@ w³asno¶ci oraz warto¶ci danych i zmiennych.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 %{!?_without_tests:%{__make} test}
 
