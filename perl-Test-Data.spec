@@ -10,7 +10,8 @@ Summary(pl):	Modu³ Perla Test::Data - funkcje testuj±ce typy okre¶lonych zmienny
 Name:		perl-Test-Data
 Version:	0.96
 Release:	1
-License:	GPL or Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	83de4234ee1a57f5b199ea6e76b2babd
@@ -40,12 +41,14 @@ w³asno¶ci oraz warto¶ci danych i zmiennych.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
+
 %{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
