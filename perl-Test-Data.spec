@@ -9,7 +9,7 @@ Summary:	Test::Data Perl module - test functions for particular variable types
 Summary(pl):	Modu³ Perla Test::Data - funkcje testuj±ce typy okre¶lonych zmiennych
 Name:		perl-Test-Data
 Version:	0.7
-Release:	1
+Release:	2
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -38,7 +38,7 @@ w³asno¶ci oraz warto¶ci danych i zmiennych.
 %build
 perl Makefile.PL
 %{__make}
-# %{!?_without_tests:%{__make} test}
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
