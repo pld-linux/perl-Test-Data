@@ -8,13 +8,13 @@
 Summary:	Test::Data Perl module - test functions for particular variable types
 Summary(pl):	Modu³ Perla Test::Data - funkcje testuj±ce typy okre¶lonych zmiennych
 Name:		perl-Test-Data
-Version:	1.17
+Version:	1.19
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	98c891df742e42f5dff59e5c9f6405c0
+# Source0-md5:	2a9a9819cf2d91d85c731bb52742977f
 BuildRequires:	perl-devel >= 1:5.8.7
 %if %{with tests}
 BuildRequires:	perl-Test-Pod
@@ -22,6 +22,7 @@ BuildRequires:	perl-Test-Prereq
 BuildRequires:	perl-Test-Simple
 BuildRequires:	perl(Test::Builder::Tester)
 %endif
+BuildRequires:	rpm-lib >= 3.0.3-1
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
