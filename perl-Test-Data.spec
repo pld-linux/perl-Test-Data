@@ -22,7 +22,6 @@ BuildRequires:	perl-Test-Prereq
 BuildRequires:	perl-Test-Simple
 BuildRequires:	perl(Test::Builder::Tester)
 %endif
-BuildRequires:	rpm-lib >= 3.0.3-1
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
