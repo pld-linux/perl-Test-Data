@@ -6,7 +6,7 @@
 %define		pdir	Test
 %define		pnam	Data
 Summary:	Test::Data Perl module - test functions for particular variable types
-Summary(pl.UTF-8):   Moduł Perla Test::Data - funkcje testujące typy określonych zmiennych
+Summary(pl.UTF-8):	Moduł Perla Test::Data - funkcje testujące typy określonych zmiennych
 Name:		perl-Test-Data
 Version:	1.19
 Release:	1
