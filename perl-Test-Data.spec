@@ -13,8 +13,9 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b51d1e6ea48712eebe28b81db9934464
+URL:		http://search.cpan.org/dist/Test-Data/
 BuildRequires:	perl-devel >= 1:5.8.7
 %if %{with tests}
 BuildRequires:	perl-Test-Pod
